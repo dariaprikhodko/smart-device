@@ -1,0 +1,85 @@
+.company-offer
+  padding-top: 93px
+  padding-bottom: 127px
+  background-color: $dark-grey
+  color: $white
+
+.company-offer__title
+  margin: 0
+  margin-bottom: 47px
+  font-family: Roboto Condensed
+  font-style: normal
+  font-weight: normal
+  font-size: 36px
+  line-height: 51px
+
+.company-offer__name
+  margin: 0
+  font-family: Roboto Condensed
+  font-style: normal
+  font-weight: normal
+  font-size: 20px
+  line-height: 30px
+
+.company-offer__list
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+  width: 100%
+  margin: 0
+  margin-left: auto
+  margin-right: auto
+  padding: 0
+
+.company-offer__item
+  margin: 0
+  margin-bottom: 20px
+  width: calc(33% - 20px)
+  min-height: 620px
+  border: 1px solid #EBEBEB
+
+  &:first-child,
+  &:nth-child(2n)
+    margin-right: 30px
+
+.company-offer__button
+  display: block
+  width: 63px
+  height: 63px
+  background-color: $blue
+
+@media screen and (max-width: 1023px)
+  .company-offer__list
+    flex-direction: column
+
+  .company-offer__item
+    width: 100%
+    min-height: 256px
+
+    &:first-child,
+    &:nth-child(2n)
+      margin-right: 0
+      margin-bottom: 40px
+
+  .company-offer__title
+    font-size: 32px
+    line-height: 45px
+
+@media screen and (max-width: 767px)
+  .company-offer__title
+    font-size: 28px
+    line-height: 39px
+
+  .company-offer__item
+    width: 100%
+    min-height: 256px
+
+    &:first-child,
+    &:nth-child(2n)
+      margin-bottom: 20px
+
+  .company-offer
+    padding-top: 53px
+    padding-bottom: 64px
+
+

@@ -1,0 +1,113 @@
+.company-features
+  width: 100%
+  padding-top: 109px
+  padding-bottom: 118px
+
+.features-list
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+  width: 100%
+  margin: 0
+  margin-left: auto
+  margin-right: auto
+  padding: 0
+
+
+.features-list__item
+  margin: 0
+  margin-bottom: 30px
+  width: calc(50% - 15px)
+  border: 1px solid #EBEBEB
+  border-left: 3px solid $blue
+
+  &:first-child,
+  &:nth-child(3n)
+    margin-right: 30px
+
+  &:hover
+    cursor: pointer
+    background-color: $blue
+    color: $white
+  
+.features-list__title
+  margin: 0
+  margin-bottom: 15px
+  font-family: Roboto Condensed
+  font-style: normal
+  font-weight: normal
+  font-size: 24px
+  line-height: 34px
+  text-align: left
+  color: $blue
+  
+.features-list__text
+  margin: 0
+  text-align: left
+  color: #666666
+
+.features-list__container
+  padding: 98px 42px 49px 44px
+  overflow-y: hidden
+  margin: 0
+  min-height: 103px
+  height: 100%
+  box-sizing: border-box
+  text-align: center
+
+.about-company
+  margin-top: 100px
+  padding-left: 200px
+
+.about-company__title
+  margin: 0
+  margin-bottom: 18px
+  font-family: Roboto Condensed
+  font-style: normal
+  font-weight: normal
+  font-size: 36px
+  line-height: 51px
+  color: #666666
+
+.about-company__text
+  margin: 0
+  color: #666666
+
+.about-company__text--paragraph
+  margin-bottom: 20px
+
+.about-company__text--tablet
+  display: none
+
+@media screen and (max-width: 1023px)
+  .features-list__container
+    padding: 70px 20px 49px 25px
+
+  .about-company
+    padding-left: 22%
+
+  .about-company__text--desktop
+    display: none
+
+  .about-company__text--tablet
+    display: block
+
+@media screen and (max-width: 767px)
+  .features-list
+    flex-direction: column
+
+  .features-list__item
+    margin: 0
+    margin-bottom: 20px
+    width: 100%
+    border: 1px solid #EBEBEB
+    border-left: 3px solid $blue
+
+  &:first-child,
+  &:nth-child(3n)
+    margin-right: 0
+
+  .about-company
+    margin-top: 60px
+    padding-left: 0
+    
