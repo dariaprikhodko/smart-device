@@ -60,6 +60,7 @@
   padding-left: 200px
 
 .about-company__title
+  position: relative
   margin: 0
   margin-bottom: 18px
   font-family: Roboto Condensed
@@ -68,6 +69,17 @@
   font-size: 36px
   line-height: 51px
   color: #666666
+
+.about-company__title::before
+  position: absolute
+  content: ""
+  display: block
+  width: 317px
+  height: 340px
+  left: -190px
+  top: -10px
+  background-image: url("../img/maskgroup.png")
+  background-repeat: no-repeat
 
 .about-company__text
   margin: 0
@@ -78,6 +90,55 @@
 
 .about-company__text--tablet
   display: none
+
+.watch,
+.hired,
+.detective,
+.tag
+  position: relative
+
+.watch::before
+  position: absolute
+  content: ""
+  display: block
+  width: 29px
+  height: 35px
+  left: 5px
+  top: -45px
+  background-image: url("../img/stopwatch.svg")
+
+.watch svg
+  fill: $blue
+
+.hired::before
+  position: absolute
+  content: ""
+  display: block
+  width: 35px
+  height: 35px
+  left: 5px
+  top: -45px
+  background-image: url("../img/hired.svg")
+
+.detective::before
+  position: absolute
+  content: ""
+  display: block
+  width: 36px
+  height: 31px
+  left: 5px
+  top: -45px
+  background-image: url("../img/detective.svg")
+
+.tag::before
+  position: absolute
+  content: ""
+  display: block
+  width: 35px
+  height: 35px
+  left: 5px
+  top: -45px
+  background-image: url("../img/tag.svg")
 
 @media screen and (max-width: 1023px)
   .features-list__container
@@ -103,11 +164,15 @@
     border: 1px solid #EBEBEB
     border-left: 3px solid $blue
 
-  &:first-child,
-  &:nth-child(3n)
-    margin-right: 0
+    &:first-child,
+    &:nth-child(3n)
+      margin-right: 0
 
   .about-company
     margin-top: 60px
     padding-left: 0
+
+  .about-company__title::before
+    display: none
+
     
