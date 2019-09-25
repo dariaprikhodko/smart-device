@@ -1,10 +1,11 @@
 .page-header
+  width: 100%
   color: $white
   background-color: $dark-grey
-  background-image: url("../img/plata.png"), url("../img/image-background.png")
+  background-image: url("../img/image-background.png")
   background-repeat: no-repeat
-  background-size: 705px 515px, 636px 636px, 373px 373px, cover
-  background-position: bottom right, center center, center center, center center
+  background-size: cover
+  background-position: center center
 
 .page-header__container
   margin-left: auto
@@ -107,6 +108,7 @@
 .page-header__title
   margin: 0
   margin-bottom: 30px
+  z-index: 2
   font-family: Roboto Condensed;
   font-style: normal
   font-weight: bold
@@ -132,9 +134,10 @@
   display: block
   width: 66px
   height: 2px
-  left: 30px
-  top: 0
+  left: 20px
+  top: 30px
   color: $white
+  background-color: $white
 
 .about
   position: relative
@@ -173,6 +176,7 @@
   height: 1px
   top: 52px
   color: $white
+  background-color: $white
 
 .page-header__burger::after
   position: absolute
@@ -182,12 +186,20 @@
   height: 1px
   top: 50px
   color: $white
+  background-color: $white
+
+.about-picture
+  background-image: url("../img/polygons.svg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: top right
+
+.about-picture__img
+  position: absolute
+  width: 705px
+  height: 515px
 
 @media screen and (max-width: 1023px)
-  .page-header
-    background-size: 465px 340px, 501px 501px, 294px 294px, cover
-    background-position: center right, center center, center center, center center
-
   .page-header__container
     max-width: 700px
     width: 100%
@@ -208,10 +220,6 @@
     display: none
 
 @media screen and (max-width: 767px)
-  .page-header
-    background-size: 381px 220px, 479px 479px, 281px 281px, cover
-    background-position: top right, center right, bottom center, center center
-
   .page-header__container
     margin-right: auto
     max-width: 300px

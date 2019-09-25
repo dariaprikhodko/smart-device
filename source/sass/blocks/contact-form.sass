@@ -1,10 +1,10 @@
 .contact-form
   background-color: $blue
   color: $white
-  background-image: url("../img/paper-plane.png")
-  background-repeat: no-repeat
-  background-size: 511px 288px
-  background-position: center left
+  background-image: url("../img/paper-plane.png"), url("../img/polygons-contact.svg")
+  background-repeat: no-repeat, no-repeat
+  background-size: 511px 288px, cover
+  background-position: center left, center center
 
 .contact-form__container
   width: 50%
@@ -107,6 +107,7 @@
   top: 0
   width: 16px
   height: 16px
+  background-color: $white
 
 .contact-filter__checkbox:checked + label::after
   content: ""

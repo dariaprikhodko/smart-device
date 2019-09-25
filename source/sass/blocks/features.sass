@@ -3,6 +3,12 @@
   padding-top: 109px
   padding-bottom: 118px
 
+.features
+  background-image: url("../img/polygons.svg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+
 .features-list
   display: flex
   flex-wrap: wrap
@@ -20,6 +26,7 @@
   width: calc(50% - 15px)
   border: 1px solid #EBEBEB
   border-left: 3px solid $blue
+  background-color: $white
 
   &:first-child,
   &:nth-child(3n)
@@ -28,7 +35,13 @@
   &:hover
     cursor: pointer
     background-color: $blue
-    color: $white
+
+    .features-list__text,
+    .features-list__title
+      color: $white
+
+    .features-list__svg
+      fill: $white
   
 .features-list__title
   margin: 0
@@ -91,54 +104,24 @@
 .about-company__text--tablet
   display: none
 
-.watch,
-.hired,
-.detective,
-.tag
-  position: relative
-
-.watch::before
-  position: absolute
-  content: ""
-  display: block
-  width: 29px
-  height: 35px
-  left: 5px
-  top: -45px
-  background-image: url("../img/stopwatch.svg")
-
-.watch svg
+.features-list__svg
   fill: $blue
 
-.hired::before
-  position: absolute
-  content: ""
-  display: block
+.watch
+  width: 29px
+  height: 35px
+
+.hired
   width: 35px
   height: 35px
-  left: 5px
-  top: -45px
-  background-image: url("../img/hired.svg")
 
-.detective::before
-  position: absolute
-  content: ""
-  display: block
+.detective
   width: 36px
   height: 31px
-  left: 5px
-  top: -45px
-  background-image: url("../img/detective.svg")
 
-.tag::before
-  position: absolute
-  content: ""
-  display: block
+.tag
   width: 35px
   height: 35px
-  left: 5px
-  top: -45px
-  background-image: url("../img/tag.svg")
 
 @media screen and (max-width: 1023px)
   .features-list__container
