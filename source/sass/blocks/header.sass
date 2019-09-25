@@ -137,6 +137,7 @@
   color: $white
 
 .about
+  position: relative
   display: flex
   flex-direction: column
   padding-bottom: 278px
@@ -149,6 +150,17 @@
   width: 100%
   margin-left: auto
   margin-right: auto
+
+.about-scroll
+  position: absolute
+  display: block
+  transform: rotate(-90deg)
+  left: 50px
+  bottom: 200px
+  color: $white
+  font-size: 14px
+  line-height: 16px
+  cursor: pointer
 
 .page-header__burger
   position: relative
@@ -191,6 +203,9 @@
   .about__info
     font-size: 18px
     line-height: 28px
+
+  .about-scroll
+    display: none
 
 @media screen and (max-width: 767px)
   .page-header
