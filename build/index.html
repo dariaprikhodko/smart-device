@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- <header class="page-header">
+  <header class="page-header">
     <div class="page-header__container">
       <section class="nav-wrapper">
         <div class="nav-wrapper__logo">
@@ -33,7 +33,7 @@
             </p>
           </li>
           <li class="contacts-list__item">
-            <button class="contacts-list__item contacts-list__item--button button button-phone">
+            <button class="contacts-list__item contacts-list__item--button button button-phone" id="order-call">
               Заказать звонок
             </button>
           </li>
@@ -60,7 +60,7 @@
         </a>
       </section>
     </div>
-  </header> -->
+  </header>
   <main class="page-main">
     <div class="features">
       <div class="page-main__wrapper">
@@ -236,6 +236,44 @@
     </section>
     
   </main>
+  <section class="contact-form__popup fixed-overlay visually-hidden" id="modalId">
+    <div class="contact-form__container contact-form__container--popup">
+      <button class="contact-form__close button-close" aria-label="кнопка закрытия слайда">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.146522 0.853553C-0.04874 0.658291 -0.04874 0.341709 0.146522 0.146447C0.341784 -0.0488155 0.658367 -0.0488156 0.853629 0.146447L8.27821 7.57103L15.7028 0.14645C15.8981 -0.0488124 16.2146 -0.0488125 16.4099 0.14645C16.6052 0.341712 16.6052 0.658294 16.4099 0.853556L8.98532 8.27814L16.41 15.7028C16.6052 15.8981 16.6052 16.2146 16.41 16.4099C16.2147 16.6052 15.8981 16.6052 15.7029 16.4099L8.27821 8.98525L0.853553 16.4099C0.658291 16.6052 0.341709 16.6052 0.146447 16.4099C-0.0488155 16.2146 -0.0488156 15.8981 0.146447 15.7028L7.57111 8.27814L0.146522 0.853553Z" fill="white"></path>
+        </svg>
+      </button>
+      <h2 class="contact-form__title">
+        Закажите звонок
+      </h2>
+      <p class="contact-form__details">
+        Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+      </p>
+      <form class="contact-filter" method="post" action="https://echo.htmlacademy.ru">
+        <fieldset class="contact-filter__item contact-filter__item--bio">
+          <div class="contact-filter__wrapper">
+            <label class="contact-filter__label visually-hidden" for="name1">Имя</label>
+            <input class="contact-filter__input contact-filter__input--name" id="name1" type="text" name="name" value="" placeholder="Имя">
+            <label class="contact-filter__label visually-hidden" for="phone1">Телефон</label>
+            <input class="contact-filter__input contact-filter__input--phone" id="phone1" type="tel" name="phone-number" value="" placeholder="Телефон" required="">
+          </div>
+        </fieldset> 
+        <fieldset class="contact-filter__item contact-filter__item--text">
+          <label class="contact-filter__label visually-hidden" for="text1">Напишите свой вопрос</label>
+          <textarea class="contact-filter__textarea" rows="6" id="text1" placeholder="Ваш вопрос"></textarea>
+        </fieldset>
+        <div class="contact-form__wrap">
+          <button type="submit" class="contact-filter__button button">Отправить</button>
+          <input class="contact-filter__checkbox visually-hidden" type="checkbox" name="hill1" id="filter-hill1" checked="">
+          <label class="contact-filter__label" for="filter-hill1">
+             Я согласен на обработку персональных данных
+          </label>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>

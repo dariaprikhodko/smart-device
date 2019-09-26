@@ -126,6 +126,75 @@
 .contact-filter__checkbox + label:active::before
   background-color: #d5d5d5
 
+.contact-form__popup
+  position: fixed
+  display: block
+  width: 490px
+  height: 605px
+  z-index: 9
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: $blue
+  margin: 0 auto
+  opacity: 1
+  transition: opacity 0.3s ease
+
+  .contact-form__title
+    position: relative
+    font-family: Roboto Condensed
+    font-style: normal
+    font-weight: normal
+    font-size: 28px
+    line-height: 39px
+    color: $white
+
+  .contact-form__details
+    font-style: normal
+    font-weight: normal
+    color: $white
+
+  .contact-filter__label
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+    color: $white
+
+  .contact-form__container--popup
+    width: 100%
+    padding: 0
+    margin: 0
+    padding: 33px 39px 19px 39px
+
+  .contact-filter__wrapper,
+  .contact-form__wrap
+    flex-direction: column
+
+  .contact-form__wrap
+    margin-top: 30px
+
+  .contact-filter__input
+    width: 100%
+
+  .contact-filter__button
+    width: 100%
+
+  .contact-filter__label
+    width: 90%
+    padding-left: 50px
+
+  .contact-filter__checkbox + label::before
+    left: 5px
+
+  .contact-filter__checkbox:checked + label::after
+    left: 10px
+
+  .contact-filter__button
+    padding-top: 10px
+    padding-bottom: 10px
+    margin-bottom: 20px
+
 @media screen and (max-width: 1023px)
   .contact-form
     background-image: none
@@ -191,4 +260,14 @@
 
   .contact-form__wrap
     margin-top: 25px
+
+  .contact-form__popup
+    width: 320px
+    height: 120vh
+    .contact-form__container--popup
+      width: 100%
+      padding: auto
+      margin: 0 auto
+    .contact-filter__button
+      margin-bottom: 10px
 
