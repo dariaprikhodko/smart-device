@@ -7,7 +7,7 @@
 
   // slider show
   buttonCall.addEventListener('click', function () {
-    var popup = document.getElementById(modalId);
+    var popup = document.getElementById('modalId');
 
     if (popup.classList.contains('visually-hidden')) {
       popup.classList.remove('visually-hidden');

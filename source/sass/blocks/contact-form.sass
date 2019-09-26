@@ -126,7 +126,7 @@
 .contact-filter__checkbox + label:active::before
   background-color: #d5d5d5
 
-.contact-form__popup
+.contact-popup
   position: fixed
   display: block
   width: 490px
@@ -140,7 +140,7 @@
   opacity: 1
   transition: opacity 0.3s ease
 
-  .contact-form__title
+  .contact-popup__title
     position: relative
     font-family: Roboto Condensed
     font-style: normal
@@ -149,7 +149,7 @@
     line-height: 39px
     color: $white
 
-  .contact-form__details
+  .contact-popup__details
     font-style: normal
     font-weight: normal
     color: $white
@@ -160,15 +160,16 @@
     font-size: 14px
     line-height: 16px
     color: $white
+    margin-bottom: 20px
 
-  .contact-form__container--popup
+  .contact-popup--popup
     width: 100%
     padding: 0
     margin: 0
     padding: 33px 39px 19px 39px
 
   .contact-filter__wrapper,
-  .contact-form__wrap
+  .contact-popup__wrap
     flex-direction: column
 
   .contact-form__wrap
@@ -206,7 +207,7 @@
     margin-right: auto
     padding-top: 76px
 
-  .contact-form__title
+  .contact-popup__title
     font-size: 32px
     line-height: 45px
 
@@ -222,7 +223,7 @@
   .contact-filter__input
     width: 100%
 
-  .contact-form__wrap
+  .contact-popup__wrap
     flex-direction: column
 
   .contact-filter__button
@@ -238,11 +239,11 @@
     padding-top: 32px
     padding-bottom: 41px
 
-  .contact-form__title
+  .contact-popup__title
     font-size: 28px
     line-height: 39px
 
-  .contact-form__details
+  .contact-popup__details
     margin-bottom: 25px
 
   .contact-filter__checkbox + label::before 
@@ -258,13 +259,13 @@
   .contact-filter__textarea
     min-height: 114px
 
-  .contact-form__wrap
+  .contact-popup__wrap
     margin-top: 25px
 
-  .contact-form__popup
+  .contact-popup
     width: 320px
     height: 120vh
-    .contact-form__container--popup
+    .contact-popup--popup
       width: 100%
       padding: auto
       margin: 0 auto
