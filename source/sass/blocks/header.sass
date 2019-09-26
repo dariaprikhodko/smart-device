@@ -164,35 +164,50 @@
   font-size: 14px
   line-height: 16px
   cursor: pointer
+  opacity: 1
+  transition: opacity
+  transition-duration: 0.2s
+  transition-timing-function: ease-in-out
+  transition-delay: 0s
+
+  &:hover,
+  &:active,
+  &:focus
+    color: $blue
+    opacity: 0.7
 
 .page-header__burger
   position: relative
 
-.page-header__burger::before
-  position: absolute
-  content: ""
-  display: block
-  width: 37px
-  height: 1px
-  top: 52px
-  color: $white
-  background-color: $white
+// .page-header__burger::before
+//   position: absolute
+//   content: ""
+//   display: block
+//   width: 37px
+//   height: 1px
+//   top: 52px
+//   color: $white
+//   background-color: $white
 
-.page-header__burger::after
-  position: absolute
-  content: ""
-  display: block
-  width: 37px
-  height: 1px
-  top: 50px
-  color: $white
-  background-color: $white
+// .page-header__burger::after
+//   position: absolute
+//   content: ""
+//   display: block
+//   width: 37px
+//   height: 1px
+//   top: 50px
+//   color: $white
+//   background-color: $white
 
 .about-picture
+  position: absolute
+  left: 750px
+  width: 1920px
+  height: 950px
   background-image: url("../img/polygons.svg")
   background-repeat: no-repeat
-  background-size: cover
-  background-position: top right
+  // background-size: 1920px 950px
+  background-position: top 70px right -35px
 
 .about-picture__img
   position: absolute
@@ -219,6 +234,14 @@
   .about-scroll
     display: none
 
+  .about-picture
+    position: absolute
+    left: 750px
+    width: 465px
+    height: 340px
+    background-size: 1514px 749px
+    background-position: top right
+
 @media screen and (max-width: 767px)
   .page-header__container
     margin-right: auto
@@ -229,14 +252,27 @@
     padding-left: 10px
 
   .about__info
-    width: 245px
+    width: auto
     font-size: 16px
     line-height: 25px
-    padding-left: 0
+    padding-left: 60px
 
   .page-header__title
     width: 277px
 
   .contacts-list
     width: 50%
+
+  .about-picture
+    position: absolute
+    left: 750px
+    width: 301px
+    height: 220px
+    background-image: url("../img/polygons.svg")
+    background-repeat: no-repeat
+    background-size: 1446px 715px
+    background-position: top right
+
+  .about__info::before
+    width: 33px
 

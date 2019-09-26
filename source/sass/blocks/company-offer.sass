@@ -1,6 +1,6 @@
 .company-offer
   padding-top: 93px
-  padding-bottom: 127px
+  padding-bottom: 110px
   background-color: $dark-grey
   color: $white
 
@@ -23,6 +23,7 @@
   font-weight: normal
   font-size: 20px
   line-height: 30px
+  text-decoration: none
 
 .company-offer__list
   display: flex
@@ -41,18 +42,35 @@
   margin-bottom: 20px
   width: calc(33% - 20px)
   min-height: 620px
+  text-decoration: none
+  color: $white
+  opacity: 1
+  transition: opacity
+  transition-duration: 0.2s
+  transition-timing-function: ease-in-out
+  transition-delay: 0s
+  overflow: hidden
 
   &:first-child,
   &:nth-child(2n)
     margin-right: 30px
 
+  &:hover
+    opacity: 0.5
+
 .company-offer__button
+  position: relative
   display: block
   margin-left: auto
   margin-top: auto
   width: 63px
   height: 63px
   background-color: $blue
+
+.company-offer__vector
+  position: absolute
+  top: 50%
+  left: 50%
 
 @media screen and (max-width: 1023px)
   .company-offer__list
@@ -65,7 +83,7 @@
     &:first-child,
     &:nth-child(2n)
       margin-right: 0
-      margin-bottom: 40px
+      margin-bottom: 45px
 
   .company-offer__title
     font-size: 32px
@@ -89,6 +107,13 @@
     background-size: cover
     background-position: center
 
+  .company-offer
+    padding-top: 45px
+    padding-bottom: 70px
+
+  .company-offer__name
+    width: 25%
+
 @media screen and (max-width: 767px)
   .company-offer__title
     font-size: 28px
@@ -106,4 +131,8 @@
     padding-top: 53px
     padding-bottom: 64px
 
+  .company-offer__name
+    margin-left: 30px
+    margin-top: 20px
+    width: 60%
 

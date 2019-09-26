@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="page-header">
+  <!-- <header class="page-header">
     <div class="page-header__container">
       <section class="nav-wrapper">
         <div class="nav-wrapper__logo">
@@ -60,7 +60,7 @@
         </a>
       </section>
     </div>
-  </header>
+  </header> -->
   <main class="page-main">
     <div class="features">
       <div class="page-main__wrapper">
@@ -72,7 +72,7 @@
             <li class="features-list__item">
               <div class="features-list__container">
                 <svg class="features-list__svg watch">
-                  <use xlink:href="#stopwatch"></use>
+                  <use xlink:href="img/sprite.svg#stopwatch"></use>
                 </svg>
                 <h3 class="features-list__title">
                   Оперативные сроки
@@ -88,7 +88,7 @@
             <li class="features-list__item">
               <div class="features-list__container">
                 <svg class="features-list__svg hired">
-                  <use xlink:href="#hired"></use>
+                  <use xlink:href="img/sprite.svg#hired"></use>
                 </svg>
                 <h3 class="features-list__title">
                   Крупные поставщики
@@ -104,7 +104,7 @@
             <li class="features-list__item">
               <div class="features-list__container">
                 <svg class="features-list__svg detective">
-                  <use xlink:href="#detective"></use>
+                  <use xlink:href="img/sprite.svg#detective"></use>
                 </svg>
                 <h3 class="features-list__title">
                   Полная конфиденциальность
@@ -118,7 +118,7 @@
             <li class="features-list__item">
               <div class="features-list__container">
                 <svg class="features-list__svg tag">
-                  <use xlink:href="#tag"></use>
+                  <use xlink:href="img/sprite.svg#tag"></use>
                 </svg>
                 <h3 class="features-list__title">
                   Персонализация стоимости
@@ -167,38 +167,38 @@
         <h2 class="company-offer__title">
           Service Device предлагает следующие товары и услуги
         </h2>
-        <ul class="company-offer__list">
-          <li class="company-offer__item company-offer__item--production" style="background-image: url('img/production.png')">
+        <div class="company-offer__list">
+          <a href="#" class="company-offer__item company-offer__item--production" style="background-image: url('img/production.png')">
             <h3 class="company-offer__name">
               Производство  печатных плат
             </h3>
-            <a href="#" class="company-offer__button">
-              <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <span class="company-offer__button">
+              <svg class="company-offer__vector" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 8.5L5 4.5L1 0.5" stroke="white" stroke-linejoin="round"></path>
               </svg>
-            </a>
-          </li>
-          <li class="company-offer__item company-offer__item--install" style="background-image: url('img/install.png')">
+            </span>
+          </a>
+          <a href="#" class="company-offer__item company-offer__item--install" style="background-image: url('img/install.png')">
             <h3 class="company-offer__name">
               Монтаж печатных плат
             </h3>
-            <a href="#" class="company-offer__button">
-              <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <span class="company-offer__button">
+              <svg class="company-offer__vector" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 8.5L5 4.5L1 0.5" stroke="white" stroke-linejoin="round"></path>
               </svg>
-            </a>
-          </li>
-          <li class="company-offer__item company-offer__item--additionals" style="background-image: url('img/additionals.png')">
+            </span>
+          </a>
+          <a href="" class="company-offer__item company-offer__item--additionals" style="background-image: url('img/additionals.png')">
             <h3 class="company-offer__name">
               Комплектующие для светотехники
             </h3>
-            <a href="#" class="company-offer__button">
-              <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <span class="company-offer__button">
+              <svg class="company-offer__vector" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 8.5L5 4.5L1 0.5" stroke="white" stroke-linejoin="round"></path>
               </svg>
-            </a>
-          </li>
-        </ul>
+            </span>
+          </a>
+        </div>
       </div>
     </section>
     <section class="contact-form">
@@ -213,11 +213,14 @@
           <form class="contact-filter" method="post" action="https://echo.htmlacademy.ru">
             <fieldset class="contact-filter__item contact-filter__item--bio">
               <div class="contact-filter__wrapper">
+                <label class="contact-filter__label visually-hidden" for="name">Имя</label>
                 <input class="contact-filter__input contact-filter__input--name" id="name" type="text" name="name" value="" placeholder="Имя">
+                <label class="contact-filter__label visually-hidden" for="phone">Телефон</label>
                 <input class="contact-filter__input contact-filter__input--phone" id="phone" type="tel" name="phone-number" value="" placeholder="Телефон" required="">
               </div>
             </fieldset> 
             <fieldset class="contact-filter__item contact-filter__item--text">
+              <label class="contact-filter__label visually-hidden" for="text">Напишите свой вопрос</label>
               <textarea class="contact-filter__textarea" rows="6" id="text" placeholder="Ваш вопрос"></textarea>
             </fieldset>
             <div class="contact-form__wrap">

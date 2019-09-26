@@ -1,7 +1,7 @@
 .company-features
   width: 100%
   padding-top: 109px
-  padding-bottom: 118px
+  padding-bottom: 110px
 
 .features
   background-image: url("../img/polygons.svg")
@@ -19,14 +19,20 @@
   margin-right: auto
   padding: 0
 
+.features-list__svg
+  display: block
+  margin-bottom: 20px
+
 
 .features-list__item
   margin: 0
-  margin-bottom: 30px
+  margin-bottom: 45px
   width: calc(50% - 15px)
   border: 1px solid #EBEBEB
   border-left: 3px solid $blue
   background-color: $white
+  opacity: 1
+  transition: all .2s ease-in-out
 
   &:first-child,
   &:nth-child(3n)
@@ -35,10 +41,12 @@
   &:hover
     cursor: pointer
     background-color: $blue
+    opacity: 0.9
 
     .features-list__text,
     .features-list__title
       color: $white
+      opacity: 0.9
 
     .features-list__svg
       fill: $white
@@ -60,7 +68,7 @@
   color: #666666
 
 .features-list__container
-  padding: 98px 42px 49px 44px
+  padding: 45px 42px 49px 44px
   overflow-y: hidden
   margin: 0
   min-height: 103px
@@ -99,7 +107,7 @@
   color: #666666
 
 .about-company__text--paragraph
-  margin-bottom: 20px
+  margin-bottom: 35px
 
 .about-company__text--tablet
   display: none
@@ -124,8 +132,15 @@
   height: 35px
 
 @media screen and (max-width: 1023px)
+  .about-company
+    margin-top: 40px
+
+  .about-company__title
+    font-size: 32px
+    line-height: 45px
+
   .features-list__container
-    padding: 70px 20px 49px 25px
+    padding: 25px 20px 25px 25px
 
   .about-company
     padding-left: 22%
@@ -136,7 +151,22 @@
   .about-company__text--tablet
     display: block
 
+  .features-list__svg
+    margin-bottom: 10px
+
+  .features-list__title
+    margin-bottom: 5px
+
+  .features-list__item
+    margin-bottom: 25px
+
+  .company-features 
+    padding-bottom: 80px
+
 @media screen and (max-width: 767px)
+  .features-list__container
+    padding: 25px 18px 25px 22px
+
   .features-list
     flex-direction: column
 
@@ -152,10 +182,21 @@
       margin-right: 0
 
   .about-company
-    margin-top: 60px
+    margin-top: 40px
     padding-left: 0
 
   .about-company__title::before
     display: none
+
+  .features-list__title
+    font-size: 20px
+    line-height: 28px
+
+  .about-company__title
+    font-size: 28px
+    line-height: 39px
+
+  .company-features
+    padding-bottom: 60px
 
     

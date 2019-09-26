@@ -4,7 +4,7 @@
   background-image: url("../img/paper-plane.png"), url("../img/polygons-contact.svg")
   background-repeat: no-repeat, no-repeat
   background-size: 511px 288px, cover
-  background-position: center left, center center
+  background-position: top 155px left 400px, center center
 
 .contact-form__container
   width: 50%
@@ -49,7 +49,8 @@
   margin-right: 30px
 
 .contact-filter__input--phone
-  width: calc(50% - 15px)
+  width: calc(49% - 15px)
+  margin-right: 3px
 
 .contact-filter
   display: flex
@@ -57,6 +58,7 @@
 
 .contact-filter__wrapper
   display: flex
+  flex-wrap: wrap
 
 .contact-filter__input::-webkit-input-placeholder,
 .contact-filter__textarea::-webkit-input-placeholder 
@@ -91,11 +93,8 @@
   margin-top: 51px
 
 .contact-filter__label
+  position: relative
   width: 46%
-
-.contact-filter__button
-  width: 46%
-  margin-right: 42px
 
 .contact-filter__checkbox
   position: relative
@@ -103,22 +102,29 @@
 .contact-filter__checkbox + label::before 
   content: ""
   position: absolute
-  left: 0
-  top: 0
+  left: -25px
+  top: 4px
   width: 16px
   height: 16px
-  background-color: $white
+  background-color: $blue
+  border: 1px solid $white
 
 .contact-filter__checkbox:checked + label::after
   content: ""
   position: absolute
-  left: 0
-  top: 0
+  left: -20px
+  top: 10px
   width: 7.5px
   height: 4.5px
   background-image: url("../img/vector.svg")
   background-repeat: no-repeat
   background-position: center center
+
+.contact-filter__checkbox + label:hover::before 
+  opacity: 0.6
+
+.contact-filter__checkbox + label:active::before
+  background-color: #d5d5d5
 
 @media screen and (max-width: 1023px)
   .contact-form
@@ -129,8 +135,18 @@
     width: 100%
     margin-left: auto
     margin-right: auto
+    padding-top: 76px
 
-@media screen and (max-width: 1023px)
+  .contact-form__title
+    font-size: 32px
+    line-height: 45px
+
+  .contact-filter__input--name,
+  .contact-filter__input--phone
+    height: 55px
+    margin-bottom: 40px
+
+@media screen and (max-width: 767px)
   .contact-filter__wrapper
     flex-direction: column
 
@@ -147,6 +163,7 @@
   .contact-filter__label
     width: 100%
     margin-top: 30px
+    padding-left: 25px
 
   .contact-form__container
     padding-top: 32px
@@ -158,5 +175,20 @@
 
   .contact-form__details
     margin-bottom: 25px
-   
+
+  .contact-filter__checkbox + label::before 
+    left: -5px
+    
+  .contact-filter__checkbox:checked + label::after
+    left: 0
+    
+  .contact-filter__input--name,
+  .contact-filter__input--phone
+    margin-bottom: 20px
+
+  .contact-filter__textarea
+    min-height: 114px
+
+  .contact-form__wrap
+    margin-top: 25px
 

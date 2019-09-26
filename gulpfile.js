@@ -15,6 +15,11 @@ var svgstore = require("gulp-svgstore")
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var cheerio = require('gulp-cheerio');
+var imageminPngquant = require("imagemin-pngquant");
+var imageminZopfli = require("imagemin-zopfli");
+var imageminMozjpeg = require("imagemin-mozjpeg");
+var imageminGiflossy = require("imagemin-giflossy");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -48,16 +53,45 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("images", function() {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.svgo()
-    ]))
-
-    .pipe(gulp.dest("source/img"));
-
+gulp.task('images', function (done) {
+  gulp.src('build/img/**/*.{png,jpg,gif}')
+      .pipe((imagemin([
+        // png
+        imageminPngquant({
+          speed: 1,
+          quality: [0.95, 1]
+        }),
+        imageminZopfli({
+          more: true,
+          iterations: 30 // very slow but more effective
+        }),
+        // gif
+        // imagemin.gifsicle({
+        //     interlaced: true,
+        //     optimizationLevel: 3
+        // }),
+        // gif very light lossy, use only one of gifsicle or Giflossy
+        imageminGiflossy({
+          optimizationLevel: 3,
+          optimize: 3, // keep-empty: Preserve empty transparent frames
+          lossy: 2
+        }),
+        // svg
+        imagemin.svgo({
+          plugins: [{
+            removeViewBox: false
+          }]
+        }),
+        // jpg lossless
+        // imagemin.jpegtran({
+        //   progressive: true
+        // }),
+        // jpg very light lossy, use vs jpegtran
+        imageminMozjpeg({
+          quality: 75
+        })
+      ]))) .pipe(gulp.dest('build/img'));
+  done();
 });
 
 gulp.task("webp", function () {
@@ -68,6 +102,15 @@ gulp.task("webp", function () {
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/*.svg")
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: {xmlMode: true}
+    }))
+    // cheerio plugin create unnecessary string '>', so replace it.
+    // .pipe(replace('&gt;', '>'))
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
