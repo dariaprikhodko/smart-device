@@ -1,0 +1,166 @@
+.footer__wrapper
+  max-width: 1413px
+  padding-top: 65px
+  padding-bottom: 55px
+  padding-left: 10px
+  padding-right: 10px
+  width: 100%
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+
+.footer-logo
+  width: 20%
+
+  svg
+    width: 52px
+    height: 52px
+    fill: $blue
+
+.footer-logo__name,
+.footer-logo__text
+  text-decoration: none
+
+.partition
+  width: 30%
+
+.address
+  width: 30%
+
+.socials-list
+  display: flex
+  list-style: none
+  padding: 0
+
+.partition-list
+  padding: 0
+  margin: 0
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+
+.partition-list__item
+  margin: 0
+  margin-bottom: 5px
+
+.partition-list__second
+  margin-left: auto
+
+.partition-list__first
+  min-width: 258px
+
+
+.partition__title,
+.address__title
+  margin: 0
+  font-family: Roboto Condensed
+  font-style: normal
+  font-weight: normal
+  font-size: 15px
+  line-height: 16px
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  color: $dark-grey
+  margin-bottom: 29px
+
+.partition-list__name,
+.address__address,
+.address__phone
+  font-style: normal
+  font-weight: normal
+  font-size: 15px
+  line-height: 26px
+  letter-spacing: 0.03em
+  text-decoration: none
+  color: #c2c0c0
+
+.address__phone
+  width: 50%
+
+.partition-list__name
+  opacity: 1
+  transition: opacity
+  transition-duration: 0.2s
+  transition-timing-function: ease-in-out
+  transition-delay: 0s
+
+  &:hover,
+  &:active,
+  &:focus
+    color: $blue
+    opacity: 0.7
+
+.footer-logo__name
+  margin: 0
+  font-family: Roboto Condensed
+  font-style: normal
+  font-weight: bold
+  font-size: 25px
+  line-height: 29px
+  color: $dark-grey
+  text-decoration: none
+
+.footer-logo__text
+  font-family: Roboto
+  font-style: normal
+  font-weight: 500
+  font-size: 12px
+  line-height: 14px
+  color: $light-grey
+  margin: 0
+  text-decoration: none
+
+.footer-logo__wrapper
+  margin-bottom: 54px
+  display: flex  
+
+.copyright-list
+  display: flex
+  justify-content: space-between
+  width: 100%
+  align-items: flex-start
+  list-style: none
+  font-style: normal
+  font-weight: normal
+  font-size: 13px
+  line-height: 24px
+  letter-spacing: 0.04em
+  text-transform: uppercase
+  color: $dark-grey
+  opacity: 0.5
+
+.socials-list__link
+  svg
+    width: 27px
+    height: 27px
+
+.socials-list__item
+  margin-right: 15px
+  opacity: 1
+  transition: opacity
+  transition-duration: 0.2s
+  transition-timing-function: ease-in-out
+  transition-delay: 0s
+
+  &:hover
+    opacity: 0.6
+
+.footer__copyrights
+  border-top: 1px solid #dedcdc
+
+.copyrights
+  padding: 0
+
+@media screen and (max-width: 1023px)
+  .footer-wrapper
+    display: flex
+    flex-direction: column
+
+  .footer-logo__wrapper
+    flex-direction: row
+
+
+
+
+
+
