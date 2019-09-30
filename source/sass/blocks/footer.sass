@@ -34,10 +34,14 @@
 
 .partition-list
   // width: 50%
+  display: block
+  column-count: 2
+  column-gap: 72px
+  break-inside: avoid
   padding: 0
   margin: 0
-  display: flex
-  flex-wrap: wrap
+  // display: flex
+  // flex-wrap: wrap
   list-style: none
 
 .partition-list__item
@@ -156,11 +160,18 @@
   padding: 0
 
 @media screen and (max-width: 1023px)
-  .footer-wrapper
+  .footer__wrapper
     flex-direction: column
 
-  .footer-logo__wrapper
+  .footer-logo
     flex-direction: row
+    width: 100%
+
+  .footer-logo__wrapper
+    width: 30%
+
+  .socials-list
+    width: 30%
 
 
 
