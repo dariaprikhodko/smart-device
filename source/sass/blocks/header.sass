@@ -141,7 +141,7 @@
   background-color: $white
 
 .about
-  position: relative
+  // position: relative
   display: flex
   flex-direction: column
   padding-bottom: 278px
@@ -149,6 +149,8 @@
   padding-left: 50px
 
 .about-wrapper
+  overflow-x: hidden
+  // position: relative
   display: flex
   max-width: 1447px
   width: 100%
@@ -159,8 +161,8 @@
   position: absolute
   display: block
   transform: rotate(-90deg)
-  left: 200px
-  bottom: 300px
+  left: 10px
+  bottom: 100px
   color: $white
   font-size: 14px
   line-height: 16px
@@ -187,12 +189,11 @@
   height: 515px
   background-image: url("../img/polygons.png")
   background-repeat: no-repeat
-  background-size: cover
+  // background-size: cover
   background-position: top 10px right -20px
   font-size: 0
 
 .about-picture__img
-  position: absolute
   width: 705px
   height: 515px
 
@@ -215,10 +216,11 @@
 
   .about-picture
     position: absolute
-    left: 370px
-    width: 365px
+    right: 0
+    left: auto
+    width: 300px
     height: 340px
-    background-position: top right
+    background-size: cover
 
   .desktop-only
     display: none
