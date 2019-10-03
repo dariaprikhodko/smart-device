@@ -15,12 +15,14 @@
     <div class="page-header__container">
       <section class="nav-wrapper">
         <div class="nav-wrapper__logo">
-          <svg>
-            <use xlink:href="img/sprite.svg#circuit"></use>
-          </svg>
           <a href="#" class="page-header__logo">
-            <p class="page-header__name mobile-hide">Smart Device</p>
-            <p class="page-header__text mobile-hide">умные технологии</p>
+            <svg>
+              <use xlink:href="img/sprite.svg#circuit"></use>
+            </svg>
+            <div class="page-header__wrapper">
+              <p class="page-header__name mobile-hide">Smart Device</p>
+              <p class="page-header__text mobile-hide">умные технологии</p>
+            </div>
           </a>
           <div class="page-header__burger"></div>
         </div>
@@ -61,7 +63,10 @@
           <p class="about__info">
             производство и монтаж, поставка комплектующих, блоков и модулей 
           </p>
-          <a class="button button-info button-info__large">Получить бесплатную консультацию <span class="button-info__mobile">Бесплатная консультация</span></a>
+          <a class="button button-info button-info__large">
+            <span class="button-info__desktop">Получить бесплатную консультацию</span>
+            <span class="button-info__mobile">Бесплатная консультация</span>
+          </a>
         </div>
         <a class="about-scroll">
           Скролл вниз
@@ -224,7 +229,7 @@
                 <label class="contact-filter__label visually-hidden" for="name">Имя</label>
                 <input class="contact-filter__input contact-filter__input--name" id="name" type="text" name="name" value="" placeholder="Имя" required>
                 <label class="contact-filter__label visually-hidden" for="phone">Телефон</label>
-                <input class="contact-filter__input contact-filter__input--phone" id="phone" type="tel" name="phone-number"
+                <input class="contact-filter__input contact-filter__input--phone" id="phone" type="number" name="phone-number"
                   minlength="4" maxlength="10" value="" placeholder="Телефон" required>
               </div>
             </fieldset> 
@@ -321,7 +326,7 @@
           <p class="address__address">
              г. Мытищи, Олимпийский проспект, д.10
           </p>
-          <p class="address__phone">
+          <div class="address__phone">
             <a href="tel:+74955894050">
               +7 (495) 589-40-50
             </a>
@@ -331,7 +336,7 @@
             <a href="tel:+792608079">
               +7 (926) 926-080-79
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </div>
@@ -375,12 +380,12 @@
               <label class="contact-filter__label visually-hidden" for="name1">Имя</label>
               <input class="contact-filter__input contact-filter__input--name" id="name1" type="text" name="name" value="" placeholder="Имя">
               <label class="contact-filter__label visually-hidden" for="phone1">Телефон</label>
-              <input class="contact-filter__input contact-filter__input--phone" id="phone1" type="tel" name="phone-number" value="" placeholder="Телефон" required>
+              <input class="contact-filter__input contact-filter__input--phone" id="phone1" name="phone-number" value="" placeholder="Телефон" required minlength="4" maxlength="10" value="" placeholder="Телефон">
             </div>
           </fieldset> 
           <fieldset class="contact-filter__item contact-filter__item--text">
             <label class="contact-filter__label visually-hidden" for="text1">Напишите свой вопрос</label>
-            <textarea class="contact-filter__textarea" rows="6" id="text1" placeholder="Ваш вопрос"></textarea>
+            <textarea class="contact-filter__textarea" rows="6" id="text1" placeholder="Ваш вопрос" minlength="20" maxlength="200"></textarea>
           </fieldset>
           <div class="contact-popup__wrap">
             <button type="submit" class="contact-filter__button button">Отправить</button>

@@ -101,8 +101,14 @@
     height: 52px
 
 .page-header__logo
+  display: flex
   padding-left: 10px
   text-decoration: none
+
+.page-header__wrapper
+  display: flex
+  flex-direction: column
+  margin-left: 16px
 
 .contacts-list
   display: flex
@@ -201,6 +207,10 @@
   height: 515px
 
 @media screen and (max-width: 1023px)
+  .page-header
+    max-width: none
+    width: 100%
+
   .page-header__container
     max-width: 700px
     width: 100%
@@ -253,7 +263,7 @@
     padding-left: 10px
 
   .about__info
-    width: auto
+    width: 295px
     font-size: 16px
     line-height: 25px
     padding-left: 60px
@@ -269,19 +279,17 @@
     right: 0
     left: auto
     top: 70px
-    width: 350px
-    height: 400px
+    width: 301px
+    height: 220px
 
   .about-picture
     position: absolute
     top: 100px
     // left: 20px
-    width: 300px
-    height: 220px
-    background-image: url("../img/polygons.svg")
+    background-image: url("../img/polygons.png")
     background-repeat: no-repeat
     background-position: top left
-    background-size: auto
+    background-size: 100% 100%
 
   .about__info::before
     width: 33px
