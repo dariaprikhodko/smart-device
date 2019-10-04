@@ -37,12 +37,12 @@
   // var arrayText = text.split();
   // arrayText.length = 60;
 
-  // var newtext = arrayText.join();
+  // var newtext = arrayText.join('');
 
   // aboutText.innerHTML = newtext;
 
   // console.log(text);
   // console.log(arrayText);
-  // console.log(arrayText.length);
+  // console.log(newtext);
 
 })();
