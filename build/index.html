@@ -154,7 +154,7 @@
                 платы и предоставляем мировые технологии с 1997 года. Выполняем
                 срочные заказы и пилотные образцы до 10 дней.
               </p>
-              <p class="about-company__text about-company__text--paragraph about-company__text--desktop">
+              <p class="about-company__text about-company__text--paragraph">
                 Наши поставщики - мировые производители электронных
                 компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные 
                 платы и комплектующие Service Devices применяются на 
@@ -229,7 +229,7 @@
                 <label class="contact-filter__label visually-hidden" for="name">Имя</label>
                 <input class="contact-filter__input contact-filter__input--name" id="name" type="text" name="name" value="" placeholder="Имя" required="">
                 <label class="contact-filter__label visually-hidden" for="phone">Телефон</label>
-                <input class="contact-filter__input contact-filter__input--phone" id="phone" type="number" name="phone-number" minlength="4" maxlength="10" value="" placeholder="Телефон" required="">
+                <input class="contact-filter__input contact-filter__input--phone" id="phone" type="number" name="phone-number" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" value="" placeholder="Телефон" required="">
               </div>
             </fieldset> 
             <fieldset class="contact-filter__item contact-filter__item--text">
@@ -377,9 +377,9 @@
           <fieldset class="contact-filter__item contact-filter__item--bio">
             <div class="contact-filter__wrapper">
               <label class="contact-filter__label visually-hidden" for="name1">Имя</label>
-              <input class="contact-filter__input contact-filter__input--name" id="name1" type="text" name="name" value="" placeholder="Имя">
+              <input class="contact-filter__input contact-filter__input--name" id="name1" type="text" name="name" value="" placeholder="Имя" required="">
               <label class="contact-filter__label visually-hidden" for="phone1">Телефон</label>
-              <input class="contact-filter__input contact-filter__input--phone" id="phone1" name="phone-number" value="" placeholder="Телефон" required="" minlength="4" maxlength="10">
+              <input class="contact-filter__input contact-filter__input--phone" id="phone1" name="phone-number" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" value="" placeholder="Телефон" required="" minlength="18" maxlength="18">
             </div>
           </fieldset> 
           <fieldset class="contact-filter__item contact-filter__item--text">

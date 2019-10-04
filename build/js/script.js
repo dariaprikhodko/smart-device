@@ -4,6 +4,9 @@
   var bodyElement = document.body;
   var htmlElement = document.querySelector('html');
   var buttonCall = document.getElementById('order-call');
+  var aboutText = document.querySelector('.about-company__text--paragraph');
+
+  console.log(aboutText);
 
   // slider show
   buttonCall.addEventListener('click', function () {
@@ -29,5 +32,17 @@
       }
     });
   });
+
+  // var text = aboutText.innerHTML;
+  // var arrayText = text.split();
+  // arrayText.length = 60;
+
+  // var newtext = arrayText.join();
+
+  // aboutText.innerHTML = newtext;
+
+  // console.log(text);
+  // console.log(arrayText);
+  // console.log(arrayText.length);
 
 })();
