@@ -6,8 +6,6 @@
   var buttonCall = document.getElementById('order-call');
   var aboutText = document.querySelector('.about-company__text--paragraph');
 
-  console.log(aboutText);
-
   // slider show
   buttonCall.addEventListener('click', function () {
     var popup = document.getElementById('modalId');
@@ -33,13 +31,19 @@
     });
   });
 
-  // var text = aboutText.innerHTML;
-  // var arrayText = text.split();
-  // arrayText.length = 60;
+  var text = aboutText.innerHTML;
+  var arrayText = text.split();
+  arrayText.length = 60;
 
-  // var newtext = arrayText.join('');
+  var newText = arrayText.join('');
 
-  // aboutText.innerHTML = newtext;
+  // aboutText.innerHTML = newText;
+
+  if (window.innerWidth >= 768) {
+    aboutText.innerHTML = text;
+  } else {
+    aboutText.innerHTML = newText;
+  }
 
   // console.log(text);
   // console.log(arrayText);

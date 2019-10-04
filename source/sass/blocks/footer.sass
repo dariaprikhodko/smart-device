@@ -175,10 +175,17 @@
 .wrap-partition
   display: flex
 
+.copyright-list__tablet
+  display: none
+
+
 @media screen and (max-width: 1023px)
   .footer__wrapper
     position: relative
     flex-direction: column
+
+  .copyright-list__desktop
+    display: none
 
   .footer-logo
     display: flex
@@ -214,9 +221,19 @@
     width: 55%
 
   .copyright-list__tablet
-    position: absolute
-    top: -411px
-    left: 295px
+    margin: 0
+    margin-left: 80px
+    margin-top: 20px
+    display: block
+    font-style: normal
+    font-weight: normal
+    font-size: 13px
+    line-height: 24px
+    letter-spacing: 0.04em
+    text-transform: uppercase
+    color: $dark-grey
+    opacity: 0.5
+    text-align: center
 
   .tablet-hide
     display: none
@@ -238,7 +255,7 @@
   .footer-logo__wrapper
     width: auto
     margin: 0 auto
-    margin-bottom: 90px
+    margin-bottom: 32px
     // margin: 0
 
   .socials-list
@@ -254,12 +271,6 @@
     display: flex
     flex-direction: column
     // margin: 0
-
-  .copyright-list__tablet
-    position: absolute
-    top: -538px
-    left: 229px
-    width: auto
 
   .partition
     min-width: 280px
@@ -283,6 +294,10 @@
     display: flex
     flex-direction: column
     margin: auto 1
+
+  .copyright-list__tablet
+    margin-left: 0
+    margin-top: 0
  
   .tablet-hide
     display: none
