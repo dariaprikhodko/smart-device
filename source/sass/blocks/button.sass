@@ -16,6 +16,8 @@
   &:hover
     opacity: 0.6
 
+.button-cross
+  display: none
 
 .button-phone
   // padding: 14px 13px 8px 12px
@@ -134,3 +136,37 @@
   .contact-filter__button
     padding-top: 10px
     padding-bottom: 10px
+
+  .button-cross
+    display: block
+    position: absolute
+    top: 50%
+    transform: translateY(-50%) rotate(0  )
+    right: 10px
+    width: 16px
+    height: 16px
+    padding: 0
+    cursor: pointer
+    appearance: none
+    border: none
+    background-color: transparent
+    background-position: center
+    background-image: url("../img/cross.svg")
+    background-repeat: no-repeat
+    outline: none
+    border-radius: 50%
+    transition: all 0.2s ease-in-out
+
+    &:hover
+      border-radius: 50%
+      background-color: $blue
+      transition: all ease-in-out .2s
+
+  .open
+    background-color: transparent
+    background-position: center
+    background-image: url("../img/union.svg")
+    background-repeat: no-repeat
+    // background-color: #C4C4C4
+    
+

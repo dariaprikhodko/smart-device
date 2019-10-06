@@ -4,7 +4,8 @@
   var bodyElement = document.body;
   var htmlElement = document.querySelector('html');
   var buttonCall = document.getElementById('order-call');
-  var aboutText = document.querySelector('.about-company__text--paragraph');
+  var aboutText = document.querySelector('.tablet');
+  var buttonCross = document.querySelectorAll('.button-cross');
 
   // slider show
   buttonCall.addEventListener('click', function () {
@@ -32,12 +33,10 @@
   });
 
   var text = aboutText.innerHTML;
-  var arrayText = text.split();
-  arrayText.length = 60;
+  var arrayText = text.split('');
+  arrayText.length = 267;
 
-  var newText = arrayText.join('');
-
-  // aboutText.innerHTML = newText;
+  var newText = arrayText.join('') + '...';
 
   if (window.innerWidth >= 768) {
     aboutText.innerHTML = text;
@@ -45,8 +44,13 @@
     aboutText.innerHTML = newText;
   }
 
-  // console.log(text);
-  // console.log(arrayText);
-  // console.log(newtext);
+  buttonCross.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var menu = document.querySelectorAll('.menu-closed');
+
+      btn.classList.toggle('open');
+      menu.classList.toggle('menu-opened');
+    });
+  });
 
 })();
