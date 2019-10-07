@@ -46,10 +46,9 @@
 
   buttonCross.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      var menu = document.querySelectorAll('.menu-closed');
-
-      btn.classList.toggle('open');
-      menu.classList.toggle('menu-opened');
+      // var menu = document.querySelectorAll('.menu-closed');
+      this.classList.toggle('open');
+      this.nextElementSibling.classList.toggle('menu-opened');
     });
   });
 
