@@ -6,6 +6,8 @@
   var buttonCall = document.getElementById('order-call');
   var aboutText = document.querySelector('.tablet');
   var buttonCross = document.querySelectorAll('.button-cross');
+  var buttonScroll = document.getElementById('scroll');
+  var offer = document.querySelector('.company-offer');
 
   // slider show
   buttonCall.addEventListener('click', function () {
@@ -51,5 +53,24 @@
       this.nextElementSibling.classList.toggle('menu-opened');
     });
   });
+
+  function handleGoToOffers() {
+    offer.scrollIntoView({block: 'start', behavior: 'smooth'});
+  }
+  buttonScroll.addEventListener('click', handleGoToOffers);
+
+  var phoneMask = IMask(
+      document.getElementById('phone'), {
+        mask: '+{7}(000)000-00-00'
+      });
+
+  var popupMask = IMask(
+      document.getElementById('phone1'), {
+        mask: '+{7}(000)000-00-00'
+      });
+
+  function setFocus() {
+    document.getElementById('name1').focus();
+  }
 
 })();
