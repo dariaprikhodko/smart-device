@@ -8,8 +8,10 @@
   var buttonCross = document.querySelectorAll('.button-cross');
   var buttonScroll = document.getElementById('scroll');
   var offer = document.querySelector('.company-offer');
+  var lists = Array.from(document.querySelectorAll('.menu-closed'));
+  var btns = Array.from(document.querySelectorAll('.button-cross'));
 
-  // slider show
+  // popup show
   buttonCall.addEventListener('click', function () {
     var popup = document.getElementById('modalId');
 
@@ -17,6 +19,7 @@
       popup.classList.remove('visually-hidden');
       bodyElement.classList.add('left-padding');
       htmlElement.classList.add('stop-scroll');
+      setFocus();
     }
     var buttonClose = document.querySelector('.button-close');
     function byClose() {
@@ -48,9 +51,19 @@
 
   buttonCross.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      // var menu = document.querySelectorAll('.menu-closed');
-      this.classList.toggle('open');
+      var that = this;
+      lists.forEach(function (elem) {
+        if (elem.classList.contains('menu-opened') && elem !== that.nextElementSibling) {
+          elem.classList.toggle('menu-opened');
+        }
+      });
+      btns.forEach(function (elem) {
+        if(elem.classList.contains('open') && elem !== that) {
+          elem.classList.toggle('open');
+        }
+      });
       this.nextElementSibling.classList.toggle('menu-opened');
+      this.classList.toggle('open');
     });
   });
 
