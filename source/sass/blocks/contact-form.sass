@@ -63,18 +63,38 @@
 .contact-filter__input::-webkit-input-placeholder,
 .contact-filter__textarea::-webkit-input-placeholder 
   color: $white
+  font-family: PT Mono
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 22px
 
 .contact-filter__input::-moz-placeholder,
 .contact-filter__textarea::-moz-placeholder
   color: $white
+  font-family: PT Mono
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 22px
 
 .contact-filter__input:-moz-placeholder,
 .contact-filter__textarea:-moz-placeholder
   color: $white
+  font-family: PT Mono
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 22px
 
 .contact-filter__input:-ms-input-placeholder,
 .contact-filter__textarea:-ms-input-placeholder 
   color: $white
+  font-family: PT Mono
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 22px
 
 .contact-filter__textarea 
   display: block
@@ -155,6 +175,7 @@
 
   .contact-popup__title
     position: relative
+    margin: 0
     font-family: Roboto Condensed
     font-style: normal
     font-weight: normal
@@ -203,14 +224,24 @@
 
   .contact-filter__checkbox + label::before
     left: 5px
+    top: -1px
 
   .contact-filter__checkbox:checked + label::after
     left: 10px
+    top: 5px
 
   .contact-filter__button
     padding-top: 10px
     padding-bottom: 10px
     margin-bottom: 20px
+
+  .contact-filter__textarea 
+    min-height: 104px
+    margin-bottom: 30px
+
+  .popup-wrap
+    display: flex
+    flex-direction: row-reverse
 
 @media screen and (max-width: 1023px)
   .contact-form
@@ -266,10 +297,10 @@
     margin-bottom: 25px
 
   .contact-filter__checkbox + label::before 
-    left: -5px
+    left: 1px
     
   .contact-filter__checkbox:checked + label::after
-    left: 0
+    left: 6px
     
   .contact-filter__input--name,
   .contact-filter__input--phone

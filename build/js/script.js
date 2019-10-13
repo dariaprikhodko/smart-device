@@ -7,7 +7,7 @@
   var aboutText = document.querySelector('.tablet');
   var buttonCross = document.querySelectorAll('.button-cross');
   var buttonScroll = document.getElementById('scroll');
-  var offer = document.querySelector('.company-offer');
+  var features = document.querySelector('.company-features');
   var lists = Array.from(document.querySelectorAll('.menu-closed'));
   var btns = Array.from(document.querySelectorAll('.button-cross'));
 
@@ -17,7 +17,7 @@
 
     if (popup.classList.contains('visually-hidden')) {
       popup.classList.remove('visually-hidden');
-      bodyElement.classList.add('left-padding');
+      // bodyElement.classList.add('left-padding');
       htmlElement.classList.add('stop-scroll');
       setFocus();
     }
@@ -67,10 +67,10 @@
     });
   });
 
-  function handleGoToOffers() {
-    offer.scrollIntoView({block: 'start', behavior: 'smooth'});
+  function handleGoToFeatures() {
+    features.scrollIntoView({block: 'start', behavior: 'smooth'});
   }
-  buttonScroll.addEventListener('click', handleGoToOffers);
+  buttonScroll.addEventListener('click', handleGoToFeatures);
 
   var phoneMask = IMask(
       document.getElementById('phone'), {
