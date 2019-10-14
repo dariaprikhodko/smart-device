@@ -151,6 +151,14 @@
   color: $dark-grey
   opacity: 0.5
 
+.copyright-list__link
+  text-decoration: none
+  color: $dark-grey
+  opacity: 0.5
+
+  &:hover
+    opacity: 0.3
+
 .socials-list__link
   svg
     width: 27px
@@ -186,14 +194,20 @@
   .footer__wrapper
     position: relative
     flex-direction: column
+    padding-top: 20px
+    padding-bottom: 0
 
   .copyright-list__desktop
     display: none
+
+  .copyright-list
+    padding: 0
 
   .footer-logo
     display: flex
     flex-direction: row
     width: 100%
+    padding-left: 20px
 
   .footer-logo__wrapper
     width: 30%
@@ -202,6 +216,7 @@
   .socials-list
     width: auto
     margin-left: auto
+    margin-top: 5px
 
   .partition-list
     display: block
@@ -217,7 +232,7 @@
     margin: 0 auto
 
   .address
-    min-width: 333px
+    min-width: 355px
     margin-left: auto
   
   .address__phone
@@ -226,7 +241,7 @@
   .tablet-copyright
     margin: 0
     margin-left: 80px
-    margin-top: 20px
+    margin-top: 15px
     display: block
     font-style: normal
     font-weight: normal
@@ -240,6 +255,10 @@
 
   .tablet-hide
     display: none
+
+  .copyrights
+    padding-left: 10px
+    padding-right: 10px
 
 @media screen and (max-width: 767px)
   .menu-closed
@@ -255,6 +274,7 @@
   .footer__wrapper
     padding-left: 0
     padding-right: 0
+    padding-top: 45px
 
   .footer-logo
     display: flex
@@ -299,6 +319,12 @@
     padding-left: 25px
     // padding-right: 15px
 
+  .address__title
+    margin-top: 30px
+
+  .partition__title
+    margin-top: 28px
+
   .address
     position: relative
     width: 100%
@@ -310,7 +336,7 @@
     padding-left: 25px
 
   .copyright-list
-    width: 55%
+    width: 70%
     display: flex
     padding: 0
     flex-direction: column
@@ -333,7 +359,3 @@
   .copyright-list__item
     margin-bottom: 20px
     align-self: center
-
-
-
-

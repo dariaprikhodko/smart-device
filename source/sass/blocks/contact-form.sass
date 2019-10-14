@@ -116,6 +116,7 @@
 .contact-filter__label
   position: relative
   width: 46%
+  cursor: pointer
 
   &:hover
     opacity: 0.6
@@ -223,17 +224,17 @@
     padding-left: 50px
 
   .contact-filter__checkbox + label::before
-    left: 5px
+    left: 0
     top: -1px
 
   .contact-filter__checkbox:checked + label::after
-    left: 10px
+    left: 5px
     top: 5px
 
   .contact-filter__button
     padding-top: 10px
     padding-bottom: 10px
-    margin-bottom: 20px
+    margin-bottom: 34px
 
   .contact-filter__textarea 
     min-height: 104px
@@ -267,11 +268,19 @@
   .contact-filter__wrapper
     flex-direction: column
 
+  .contact-form__title
+    font-size: 28px
+    line-height: 39px
+
+  .contact-form__details
+    margin-bottom: 20px
+
   .contact-filter__input
     width: 100%
 
   .contact-form__wrap
     flex-direction: column
+    margin-top: 25px
 
   .contact-popup__wrap
     flex-direction: column
@@ -304,7 +313,7 @@
     
   .contact-filter__input--name,
   .contact-filter__input--phone
-    margin-bottom: 20px
+    margin-bottom: 30px
 
   .contact-filter__textarea
     min-height: 114px

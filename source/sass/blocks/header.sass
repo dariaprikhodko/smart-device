@@ -181,10 +181,6 @@
   line-height: 16px
   cursor: pointer
   opacity: 1
-  transition: opacity
-  transition-duration: 0.2s
-  transition-timing-function: ease-in-out
-  transition-delay: 0s
 
   &:hover,
   &:active,
@@ -217,15 +213,29 @@
   .page-header__container
     max-width: 700px
     width: 100%
+    padding-top: 25px
+
+  .about
+    padding-top: 115px
+    padding-left: 50px
+    padding-bottom: 165px
 
   .page-header__title
-    font-size: 40px
-    line-height: 47px
+    width: 50%
+    font-size: 60px
+    line-height: 70px
     letter-spacing: 0.07em
+    margin-bottom: 25px
 
   .about__info
     font-size: 18px
     line-height: 28px
+    padding-left: 55px
+    margin-bottom: 60px
+
+  .about__info::before
+    width: 33px
+    height: 2px
 
   .about-scroll
     display: none
@@ -234,6 +244,7 @@
     position: absolute
     right: 0
     left: auto
+    bottom: 260px
     width: 300px
     height: 340px
     background-size: cover
@@ -259,6 +270,7 @@
 @media screen and (max-width: 767px)
   .page-header__container
     margin-right: auto
+    padding-top: 9px
     max-width: none
     width: 100%
     // max-width: 300px
@@ -266,16 +278,22 @@
 
   .about
     padding-left: 20px
+    padding-top: 225px
+    padding-bottom: 70px
     width: 100%
 
   .about__info
-    // width: 295px
+    width: 95%
     font-size: 16px
     line-height: 25px
     padding-left: 60px
+    margin-bottom: 0
+    padding-bottom: 45px
 
   .page-header__title
-    // width: 277px
+    font-size: 40px
+    line-height: 47px
+    letter-spacing: 0.07em
 
   .contacts-list
     width: auto
