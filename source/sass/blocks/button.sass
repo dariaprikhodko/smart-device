@@ -21,7 +21,7 @@
 
 .button-phone
   width: 180px
-  min-height: 45px
+  height: 45px
   margin-right: 0
   color: $white
   border: 1px solid #FFFFFF
@@ -78,6 +78,8 @@
 
 .contact-filter__button
   width: 46%
+  padding-top: 10px
+  padding-bottom: 10px
   font-family: Roboto Condensed
   font-style: normal
   font-weight: bold
@@ -93,8 +95,11 @@
   transition: all .2s ease-in-out
 
 .button-close
+  position: absolute
+  top: 20px
+  right: 10px
   color: $white
-  margin-left: auto
+  // margin-left: auto
   background-color: transparent
   border: none
   transition: all .2s ease-in-out
@@ -108,12 +113,16 @@
     padding: 15px 17px 15px 17px
     width: 379px
 
+  .contact-filter__button
+    width: 48%
+    padding: 13px 17px 13px 17px
+
 @media screen and (max-width: 767px)
   .button-info__large 
     display: block
     width: 287px
     margin-left: 0
-    padding: 17px 17px 14px 12px
+    padding: 16px 12px 17px 17px
 
   .button-info__desktop
     display: none
@@ -123,15 +132,16 @@
     margin-left: 0
 
   .contact-filter__button
-    padding-top: 10px
-    padding-bottom: 10px
+    width: 98%
+    padding-top: 12px
+    padding-bottom: 12px
 
   .button-cross
     position: absolute
     transform: translateY(-50%) rotate(0  )
     display: block
-    top: 36px
-    right: 10px
+    top: 34px
+    right: 17px
     width: 16px
     height: 16px
     padding: 0
