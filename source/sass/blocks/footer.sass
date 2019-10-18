@@ -35,7 +35,7 @@
   display: flex
   list-style: none
   padding: 0
-  margin-top: 20px
+  margin-top: -5px
   margin-right: 20px
 
 .partition-list
@@ -45,7 +45,7 @@
   break-inside: avoid
   padding: 0
   margin: 0
-  margin-top: 34px
+  margin-top: 29px
   list-style: none
 
 .partition-list__item
@@ -70,22 +70,28 @@
   letter-spacing: 0.05em
   text-transform: uppercase
   color: $dark-grey
-  margin-bottom: 22px
+  margin-bottom: 25px
+
+.address__title
+  padding-left: 25px
 
 .partition-list__name,
 .address__address,
 .address__phone
   font-style: normal
   font-weight: normal
-  font-size: 15px
-  line-height: 26px
-  letter-spacing: 0.03em
+  font-size: 14.5px
+  line-height: 25px
+  letter-spacing: 0.01em
   text-decoration: none
   opacity: 0.5
   color: #1B2D37
 
 .address__address
   margin-bottom: 0
+
+  .menu-closed
+    padding-left: 25px
 
 .address__phone
   width: 55%
@@ -228,15 +234,20 @@
   .copyright-list
     padding: 0
     margin: 0
+    padding-left: 15px
+    padding-right: 15px
+    padding-top: 10px
 
   .footer-logo
     display: flex
     flex-direction: row
     width: 100%
-    padding-left: 20px
+    padding-left: 24px
+    border-bottom: 1px solid #dedcdc
 
   .footer-logo__wrapper
     width: 30%
+    margin-bottom: 18px
     // margin: 0
 
   .socials-list
@@ -257,7 +268,8 @@
   .wrap-partition
     display: flex
     margin: 0 auto
-    padding-bottom: 40px
+    padding-bottom: 36px
+    padding-top: 37px
 
   .partition
     width: 47%
@@ -267,11 +279,14 @@
     // margin-left: auto
   
   .address__phone
-    width: 53%
+    width: 48%
 
   .partition__title,
   .address__title
     margin-bottom: 28px
+
+  .address__title
+    padding-left: 0
 
   .tablet-copyright
     margin: 0
@@ -301,6 +316,16 @@
   .partition-list__second
     margin-left: 0
 
+  .address__address
+    margin-bottom: 0
+
+    .menu-closed
+      padding-left: 0
+
+  .copyright-list__item
+    &:nth-child(3n)
+      margin-left: 0
+
 @media screen and (max-width: 767px)
   .footer
     padding-top: 45px
@@ -326,6 +351,7 @@
     width: 100%
     padding-bottom: 50px
     padding-left: 0
+    border-bottom: none
 
   .address__phone
     width: 65%
