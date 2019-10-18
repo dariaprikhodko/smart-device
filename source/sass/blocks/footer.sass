@@ -23,13 +23,16 @@
   text-decoration: none
 
 .partition
-  width: 45%
+  width: 50%
   margin-left: auto
   // margin-left: 147px
 
 .address
   width: 32%
   margin-left: auto
+
+  .menu-closed
+    padding-left: 13px
 
 .socials-list
   display: flex
@@ -50,10 +53,10 @@
 
 .partition-list__item
   margin: 0
-  margin-bottom: -3px
+  margin-bottom: 1px
 
 .partition-list__second
-  margin-left: auto
+  // margin-left: auto
   width: 205px
 
 .partition-list__first
@@ -73,7 +76,10 @@
   margin-bottom: 25px
 
 .address__title
-  padding-left: 25px
+  padding-left: 22px
+
+.partition__title
+  padding-left: 13px
 
 .partition-list__name,
 .address__address,
@@ -90,11 +96,8 @@
 .address__address
   margin-bottom: 0
 
-  .menu-closed
-    padding-left: 25px
-
 .address__phone
-  width: 55%
+  width: 52%
 
   a
     text-decoration: none
@@ -284,8 +287,12 @@
   .partition__title,
   .address__title
     margin-bottom: 28px
+    padding-left: 0
 
   .address__title
+    padding-left: 0
+
+  .partition__title,
     padding-left: 0
 
   .tablet-copyright
@@ -315,6 +322,10 @@
 
   .partition-list__second
     margin-left: 0
+
+  .address
+    .menu-closed
+      padding-left: 0
 
   .address__address
     margin-bottom: 0
